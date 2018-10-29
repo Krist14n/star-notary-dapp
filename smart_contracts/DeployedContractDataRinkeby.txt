@@ -1,0 +1,5 @@
+transaction hash for the new star: 0xdb87a3a2080c3a0ca29b81c8f061ab8d8bc46f1f46e939ce40cb2476314662db
+star tokenId: 1111
+transaction hash contract: 0x62fc20812644043ae43252fe6656c29ba0e5356836388c54686ed9065d787925 
+contract address: 0x6d32d3d0ec43b8fafd8c396c60dcbf6952559885
+

@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Star Notary</title>
+        <link rel="stylesheet" type="text/css" href="style.css">
+        <script src="https://cdn.jsdelivr.net/gh/ethereum/web3.js/dist/web3.min.js"></script>
+    </head>
+
+    <body>
+        <div class="container">
+            <h1>Star Notary</h1>
+
+            <h2>Register a Star</h2>
+
+            <div class="row">
+                <label class="bold">Star Name:</label>
+                <input type="text" id="star-name"/>
+            </div>
+
+            <div class="row">
+                <label class="bold">Star Coordinates:</label>
+            </div>
+
+            <div class="row">
+                <label class="bold">Dec:</label>
+                <input type="text"id="star-dec"/>
+            </div>
+
+            <div class="row">
+                <label class="bold">Mag:</label>
+                <input type="text" id="star-mag"/>
+            </div>
+
+            <div class="row">
+                <label class="bold">Cent:</label>
+                <input type="text" id="star-cent"/>
+            </div>
+
+            <div class="row">
+                <label class="bold">Star Story:</label>
+                <input type="text" id="star-story"/>
+            </div>
+
+            <button id="claim-button">Claim Star</button>
+            
+            <button id="clear-button">Clear form</button>
+
+            <h2>Search a Star</h2>
+            <div class="row">
+                <label class="bold">Token Id:</label>
+                <input type="text" id="token-id" />
+            </div>
+            <div class="row">
+                <label id="lookup-result"></label>
+            </div>
+            <button id="search-button">Lookup Star</button>
+        </div>
+        
+        <script type="module">
+        import { claimButtonClicked, searchButtonClicked } from './script.js';
+            document.querySelector('#claim-button').addEventListener('click', claimButtonClicked);
+            document.querySelector('#search-button').addEventListener('click', searchButtonClicked);
+            document.querySelector('#clear-button').addEventListener('click', function() {
+                document.getElementById("star-name").value = "";
+                document.getElementById("star-dec").value = "";
+                document.getElementById("star-mag").value = "";
+                document.getElementById("star-cent").value = "";
+                document.getElementById("star-story").value = "";
+            })
+        </script>
+        <script nomodule src="fallback.js"></script>
+    </body>
+</html>
